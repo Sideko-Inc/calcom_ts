@@ -1,0 +1,11 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "testPathIgnorePatterns": [
+    "/dist/"
+  ],
+  "moduleNameMapper": {
+    "^calcom_ts$": "<rootDir>/src/index.ts",
+    "^calcom_ts/(.*)$": "<rootDir>/src/$1"
+  }
+}
