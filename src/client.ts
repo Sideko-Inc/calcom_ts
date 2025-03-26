@@ -48,7 +48,8 @@ export class Client {
   destinationCalendars: DestinationCalendarsClient;
 
   constructor(opts?: ClientOptions) {
-    const baseUrl = opts?.baseUrl ?? opts?.environment ?? Environment.Default;
+    const baseUrl =
+      opts?.baseUrl ?? opts?.environment ?? Environment.Production;
     this._client = new CoreClient({ baseUrl, timeout: opts?.timeout });
     this._client.registerAuth("bearerAuth", new AuthBearer(opts?.apiKey));
 
